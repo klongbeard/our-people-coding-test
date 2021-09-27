@@ -14,6 +14,10 @@ class ChartedWaterController extends Controller
     {
         try {
             $islands = ChartedWater::all();
+            foreach($islands as $island) {
+                // Stored JSON as string due to using an SQLite DB. Needs to be decoded back into JSON for API response.
+                $island->map = json_decode($island->map);
+            }
         } catch (\Exception $e) {
 
             return response()->json(['error' => true, 'code' => 500, 'message' => $e]);

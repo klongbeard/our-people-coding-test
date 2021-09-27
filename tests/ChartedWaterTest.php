@@ -12,6 +12,12 @@ class ChartedWaterTest extends TestCase
         parent::setUp();
     }
 
+    public function createApplication()
+    {
+        // return require $this->getAppPath();
+        return require __DIR__.'/../bootstrap/app.php';
+    }
+
     public function testIndex()
     {
         $this->json('GET', '/api/v1/all')
