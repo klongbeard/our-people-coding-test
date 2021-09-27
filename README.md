@@ -5,20 +5,19 @@
 [![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
 [![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+To run please `cd` into the root folder and use the command `php -S localhost:8000 -t public` the API can then be accessed from your browser via the url `http://localhost:8000` or pinged via Postman or Curl in terminal. 
 
-## Official Documentation
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+# The Routes
+All routes are prefixed with `/api/v1` - perhaps slightly overkill for a coding test but I wanted to follow best practices where possible. 
 
-## Contributing
+## Get All
+`/all`
+Returns all Maps (with island count) stored in DB as a JSON object. 
 
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Create New
+Accepts `/create` and additional query string `islandSize`. The default route will create a charted terrority of 5x5, specifying an `islandSize` will return a square map at the requested size. 
 
-## Security Vulnerabilities
+E.G. `/create?islandSize=10` returns a 10 x 10 matrix. 
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
 
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
