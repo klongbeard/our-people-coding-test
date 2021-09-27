@@ -5,7 +5,7 @@
 [![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
 [![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
 
-To run please `cd` into the root folder and use the command `php -S localhost:8000 -t public` the API can then be accessed from your browser via the url `http://localhost:8000` or pinged via Postman or Curl in terminal. 
+To run please `cd` into the root folder and use the command `php -S localhost:8000 -t public` the API can then be accessed from your browser via the url `http://localhost:8000/api/v1/` or pinged via Postman or Curl in terminal. 
 
 
 # The Routes
